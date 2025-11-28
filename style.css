@@ -261,15 +261,137 @@ main .search-btn input::placeholder {
     padding-bottom: 10px;
 }
 
-.section-2 .section-2-btn a::after{
+.section-2 .section-2-btn a::after {
     content: "";
     position: absolute;
     bottom: 0;
     left: 0;
-    background-color:#649ABB;
+    background-color: #649ABB;
     width: 100%;
     height: 4px;
     border-radius: 5px;
 
 }
 
+.section-3 {
+    display: flex;
+    justify-content: space-between;
+    background-color: #bccdd538;
+    height: 100vh;
+    margin-bottom: 10%;
+}
+
+.left-section-title {
+    margin-left: 4%;
+    font-size: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 360px;
+    color: #0E254E;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.right-section-services {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 85px;
+    flex-wrap: wrap;
+    gap: 20px;
+    flex: 0 0 60%;
+}
+
+.right-section-services .card .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.right-section-services .card img {
+    padding-bottom: 10px;
+}
+
+.right-section-services .card .content h4 {
+    color: #0E254E;
+    font-weight: bold;
+    text-transform: capitalize;
+    margin-top: 10px;
+}
+
+.right-section-services .card p {
+    color: rgba(0, 0, 0, 0.473);
+    font-weight: 400;
+    font-size: 14px;
+    text-transform: capitalize;
+    padding-top: 5px;
+    margin-top: 5px;
+}
+
+
+.section-4 {
+    display: flex;
+    gap: 200px;
+    margin-bottom: 10%;
+}
+
+.section-4 .left-side-section-4 .border {
+    border: 2px solid #1b59c434;
+    border-radius: 3px;
+    width: 80%;
+    height: 480px;
+    margin-left: 30%;
+    margin-top: -163px;
+}
+
+.image-section-3-4 img {
+    width: 80%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 7px;
+    margin-left: 24%;
+    margin-top: -520px;
+    float: left;
+}
+
+.section-4 .right-side-section-4 {
+    display: flex;
+    flex-direction: column;
+}
+
+.section-4 .right-side-section-4 h2 {
+    font-size: 40px;
+    color: #0E254E;
+}
+
+.section-4 .content-right-side-section-4 {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+}
+
+.section-4 .right-side-section-4 p {
+    color: rgba(0, 0, 0, 0.632);
+    font-weight: 400;
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+}
+
+.section-4 .right-side-section-4 .btn-section-4 {
+    margin-top: 40px;
+}
+
+.section-4 .right-side-section-4 .btn-section-4 button {
+    padding: 10px 15px;
+    background-color: #649ABB;
+    outline: none;
+    border: none;
+    color: white;
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+}
