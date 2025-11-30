@@ -4,18 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="./Images/Favicon.jpg">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="./Images/Images Png/Favicon.jpg">
     <title>Dental center</title>
-    <script src="https://kit.fontawesome.com/ef9fda9237.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/animate.css">
 </head>
 
 <body>
+    <!-- Loading Page -->
+    <div id="loader">
+        <div id="spin"></div>
+    </div>
     <main>
         <!-- Information Section -->
-        <section class="information-section">
-            <p><i class="fa-solid fa-envelope"></i>info@example.com</p>
-            <p><i class="fa-solid fa-phone"></i>01234567893</p>
+        <section class="information-section wow fadeInUp">
+            <p><i class="fa-solid fa-envelope"></i>info@dental.com</p>
+            <p><i class="fa-solid fa-phone"></i>212-000-2299</p>
             <div class="icons">
                 <i class="fa-brands fa-facebook"></i>
                 <i class="fa-brands fa-instagram"></i>
@@ -25,14 +30,14 @@
         </section>
 
         <!-- Nav-Elements -->
-        <nav>
+        <nav class="wow fadeInLeft" data-wow-delay="0.5s">
             <h1>Dental.</h1>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
             <form>
                 <button>Book appointment</button>
@@ -40,7 +45,7 @@
         </nav>
 
         <!-- main-Titles -->
-        <section class="main-section">
+        <section id="home" class="main-section active wow fadeInLeft" data-wow-delay="1s">
             <div class="home-main-text">
                 <h4>welcome to dental center</h4>
                 <h2>we are best </h2>
@@ -49,7 +54,7 @@
                 <p>quia dolorum. Rerum, dignissimos iste susquisquam adipisicing </p>
                 <p>veritatis corrupti. Facere.</p>
             </div>
-            <img src="./Images/Home image 1.png" loading="lazy" alt="Home Page">
+            <img src="./Images/Images WebP/Home image 1.webp" loading="lazy" alt="Home Page">
         </section>
         <!-- Search-Buttons -->
         <div class="search-btn">
@@ -60,134 +65,246 @@
         </div>
 
         <!-- Second-section -->
-        <div class="section-2">
-            <!-- Img -->
-            <img src="./Images/Section 2.jpg" loading="lazy" alt="Doctor With Patient">
-            <!-- titles -->
-            <div class="section-2-titles">
-                <h2>Expert dental care</h2>
-                <h2>for the whole family</h2>
-                <div class="information">
-                    <p>regular checkups , cleanings, and dental exams are essentail for
-                    <p>maintaining good oral health we offer a full range of preventive care</p>
-                    <p>services, including fluorida treatments , dental sealants, and oral cancer</p>
-                    <p>screenings, our new patient information page provides helpful</p>
-                    <p> information about expect during your first visit and what to</p>
-                    <p>bring with you</p>
-                </div>
-                <div class="section-2-btn">
-                    <button>read about the team</button>
-                    <a href="#" title="Read More">learn more</a>
-                </div>
-            </div>
-        </div>
-        <!-- Third Section -->
-        <div class="section-3">
-            <!-- right-section -->
-            <div class="left-section-title">
+        <section id="services">
+            <div class="section-2 wow fadeInLeft" data-wow-delay=".5s">
+                <!-- Img -->
+                <img src="./Images/Images WebP/Section 2.webp" loading="lazy" alt="Doctor With Patient">
                 <!-- titles -->
-                <h2>Everything you</h2>
-                <h2>need in one</h2>
-                <h2>place.</h2>
-            </div>
-            <!-- right-section -->
-            <div class="right-section-services">
-                <!-- first-card -->
-                <div class="card">
-                    <img src="./Images/icon 1.png" alt="icon1">
-                    <!-- content -->
-                    <div class="content">
-                        <h4>preventive care</h4>
-                        <p>regular check-ups and</p>
-                        <p>fluoride treatments to prevent</p>
-                        <p>tooth decay and gum disease</p>
+                <div class="section-2-titles">
+                    <h2>Expert dental care</h2>
+                    <h2>for the whole family</h2>
+                    <div class="information">
+                        <p>regular checkups , cleanings, and dental exams are essentail for
+                        <p>maintaining good oral health we offer a full range of preventive care</p>
+                        <p>services, including fluorida treatments , dental sealants, and oral cancer</p>
+                        <p>screenings, our new patient information page provides helpful</p>
+                        <p> information about expect during your first visit and what to</p>
+                        <p>bring with you</p>
                     </div>
-                </div>
-                <!-- second-card -->
-                <div class="card">
-                    <img src="./Images/icon 2.png" alt="icon2">
-                    <!-- content -->
-                    <div class="content">
-                        <h4>restorative care</h4>
-                        <p>fillings, crowns, bridges, and</p>
-                        <p>dentures to restore damaged</p>
-                        <p>or missing teeth</p>
-                    </div>
-                </div>
-                <!-- third-card -->
-                <div class="card">
-                    <img src="./Images/icon 3.png" alt="icon3">
-                    <!-- content -->
-                    <div class="content">
-                        <h4>orthodontic care</h4>
-                        <p>braces and clear aligners</p>
-                        <p>straight teeth and correct</p>
-                        <p>bite issues</p>
-                    </div>
-                </div>
-                <!-- fourth-card -->
-                <div class="card">
-                    <img src="./Images/icon 4.png" alt="icon4">
-                    <!-- content -->
-                    <div class="content">
-                        <h4>oral surgery</h4>
-                        <p>extractions, wisdom teeth</p>
-                        <p>romoval, and other surgical</p>
-                        <p>procedures</p>
-                    </div>
-                </div>
-                <!-- fifth-card  -->
-                <div class="card">
-                    <img src="./Images/icon 5.png" alt="icon5">
-                    <!-- content -->
-                    <div class="content">
-                        <h4>cosmetic dentistry</h4>
-                        <p>teeth whitening, veneers,</p>
-                        <p>and other procedures to</p>
-                        <p>improve the appearance</p>
-                        <p>teeth</p>
-                    </div>
-                </div>
-                <!-- sixth-card  -->
-                <div class="card">
-                    <img src="./Images/icon 6.png" alt="icon6">
-                    <!-- content -->
-                    <div class="content">
-                        <h4>dental implants</h4>
-                        <p>dental implants are popular</p>
-                        <p>and effective way to replace</p>
-                        <p>missing teeth</p>
+                    <div class="section-2-btn">
+                        <button>read about the team</button>
+                        <a href="#" title="Read More">learn more</a>
                     </div>
                 </div>
             </div>
-        </div>
-
+        </section>
+        <!-- Third Section -->
+        <section id="about">
+            <div class="section-3 wow fadeInDown" data-wow-delay=".5s">
+                <!-- right-section -->
+                <div class="left-section-title">
+                    <!-- titles -->
+                    <h2>Everything you</h2>
+                    <h2>need in one</h2>
+                    <h2>place.</h2>
+                </div>
+                <!-- right-section -->
+                <div class="right-section-services">
+                    <!-- first-card -->
+                    <div class="card wow fadeInLeft" data-wow-delay="0.2s">
+                        <img src="./Images/Images Png/icon 1.png" alt="icon1">
+                        <!-- content -->
+                        <div class="content">
+                            <h4>preventive care</h4>
+                            <p>regular check-ups and</p>
+                            <p>fluoride treatments to prevent</p>
+                            <p>tooth decay and gum disease</p>
+                        </div>
+                    </div>
+                    <!-- second-card -->
+                    <div class="card wow fadeInLeft" data-wow-delay="0.3s">
+                        <img src="./Images/Images Png/icon 2.png" alt="icon2">
+                        <!-- content -->
+                        <div class="content">
+                            <h4>restorative care</h4>
+                            <p>fillings, crowns, bridges, and</p>
+                            <p>dentures to restore damaged</p>
+                            <p>or missing teeth</p>
+                        </div>
+                    </div>
+                    <!-- third-card -->
+                    <div class="card wow fadeInLeft" data-wow-delay="0.4s">
+                        <img src="./Images/Images Png/icon 3.png" alt="icon3">
+                        <!-- content -->
+                        <div class="content">
+                            <h4>orthodontic care</h4>
+                            <p>braces and clear aligners</p>
+                            <p>straight teeth and correct</p>
+                            <p>bite issues</p>
+                        </div>
+                    </div>
+                    <!-- fourth-card -->
+                    <div class="card wow fadeInLeft" data-wow-delay="0.5s">
+                        <img src="./Images/Images Png/icon 4.png" alt="icon4">
+                        <!-- content -->
+                        <div class="content">
+                            <h4>oral surgery</h4>
+                            <p>extractions, wisdom teeth</p>
+                            <p>romoval, and other surgical</p>
+                            <p>procedures</p>
+                        </div>
+                    </div>
+                    <!-- fifth-card  -->
+                    <div class="card wow fadeInLeft" data-wow-delay="0.6s">
+                        <img src="./Images/Images Png/icon 5.png" alt="icon5">
+                        <!-- content -->
+                        <div class="content">
+                            <h4>cosmetic dentistry</h4>
+                            <p>teeth whitening, veneers,</p>
+                            <p>and other procedures to</p>
+                            <p>improve the appearance</p>
+                            <p>teeth</p>
+                        </div>
+                    </div>
+                    <!-- sixth-card  -->
+                    <div class="card wow fadeInLeft" data-wow-delay="0.7s">
+                        <img src="./Images/Images Png/icon 6.png" alt="icon6">
+                        <!-- content -->
+                        <div class="content">
+                            <h4>dental implants</h4>
+                            <p>dental implants are popular</p>
+                            <p>and effective way to replace</p>
+                            <p>missing teeth</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
         <!-- section-4 -->
-        <div class="section-4">
-            <!-- Right side -->
-            <div class="left-side-section-4">
-                <div class="border"></div>
-                <div class="image-section-3-4">
-                    <img src="./Images/section 4.jpg" alt="Doctor">
+        <section id="blog">
+            <div class="section-4 wow fadeInLeft" data-wow-delay=".5s">
+                <!-- Right side -->
+                <div class="left-side-section-4">
+                    <div class="border"></div>
+                    <div class="image-section-3-4">
+                        <img src="./Images/Images WebP/section 4.webp" alt="Doctor">
+                    </div>
+                </div>
+                <!-- Left Side -->
+                <div class="right-side-section-4">
+                    <h2>Professionals you can</h2>
+                    <h2>trust. period.</h2>
+                    <!-- content -->
+                    <div class="content-right-side-section-4">
+                        <p>dr.givanni is prominent dental specialist, who knows how to treat</p>
+                        <p>every problem. 10+ years of experience translates into bespoke</p>
+                        <p>treatment of every pacient</p>
+                    </div>
+                    <div class="btn-section-4">
+                        <button>Read more about DR.giovanni</button>
+                    </div>
                 </div>
             </div>
-            <!-- Left Side -->
-            <div class="right-side-section-4">
-                <h2>Professionals you can</h2>
-                <h2>trust. period.</h2>
-                <!-- content -->
-                <div class="content-right-side-section-4">
-                    <p>dr.givanni is prominent dental specialist, who knows how to treat</p>
-                    <p>every problem. 10+ years of experience translates into bespoke</p>
-                    <p>treatment of every pacient</p>
+        </section>
+
+        <!-- section-5 -->
+         <section  id="contact">
+        <div class="section-5 wow fadeInLeft" data-wow-delay=".5s">
+            <!-- content -->
+            <div class="content">
+                <!-- right-side -->
+                <div class="left-Right">
+                    <div class="right-side">
+                        <!-- image -->
+                        <img src="./Images/Images WebP/Happy Girl.webp" class="wow fadeInleft" data-wow-delay="0.5s"
+                            alt="Happy Girl">
+                    </div>
+                    <!-- left side -->
+                    <div class="left-side">
+                        <!-- image -->
+                        <img src="./Images/Images WebP/Happy Man.webp" class="wow fadeInleft" data-wow-delay="1s"
+                            alt="Happy Man">
+                        <!-- titles -->
+                        <div class="titles-5">
+                            <h2>Be featured</h2>
+                            <h2>#happysmile</h2>
+                        </div>
+                    </div>
                 </div>
-                <div class="btn-section-4">
-                    <button>Read more about DR.giovanni</button>
+                <!-- quote -->
+                <div class="quote-title">
+                    <span>،،</span>
+                    <div class="titles-quote">
+                        <h2>Dr.giovanni is a genius! treatment went</h2>
+                        <h2>well and now my smile shines! thank you!</h2>
+                        <p>~Anna marie</p>
+                    </div>
                 </div>
             </div>
         </div>
+        </section>
+        <!-- Footer -->
+        <footer>
+            <!-- footer-section-1 -->
+            <div class="section-5-footer">
+                <!-- Content -->
+                <h4>patient information</h4>
+                <P>about us</P>
+                <P>History</P>
+                <P>before / afters</P>
+                <P>testimanails</P>
+                <P>conatct us</P>
+            </div>
+            <!-- footer-section-2 -->
+            <div class="section-5-footer">
+                <!-- content -->
+                <h4>services</h4>
+                <p>preventive care</p>
+                <p>implant dentistry</p>
+                <p>cosmetic dentisty</p>
+                <p>clear braces</p>
+                <p>dental emergency</p>
+            </div>
+            <!-- footer-section-3 -->
+            <div class="section-5-footer">
+                <!-- content -->
+                <h4>legal</h4>
+                <p>terms & conditions</p>
+                <p>insurance</p>
+            </div>
+            <!-- footer-section-4 -->
+            <div class="section-5-footer">
+                <h4>contact us</h4>
+                <div class="address">
+                    <p>100 west street</p>
+                    <p>2nd floor</p>
+                    <p>new york, NY 10001</p>
+                </div>
+                <div class="contact">
+                    <p><i class="fa-solid fa-phone"></i>212-000-2299</p>
+                    <p><i class="fa-solid fa-envelope"></i>info@dental.com</p>
+                </div>
+            </div>
+            <!-- footer-section-5 -->
+            <div class="section-5-footer">
+                <!-- content -->
+                <h4>stay connected</h4>
+                <!-- inputs -->
+                <div class="inputs">
+                    <input type="email" placeholder="Enter Your Email">
+                    <button>Submit</button>
+                </div>
+                <div class="icons">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                </div>
+                <div class="copyrights">
+                    <p>copyright &copy; 2025 dental.</p>
+                </div>
+            </div>
+        </footer>
     </main>
-    <script src="script.js"></script>
+
+    <!-- JS Paths -->
+    <script src="js/script.js"></script>
+
+    <!-- WOW Path -->
+    <script src="js/wow.min.js"></script>
+    <script>
+        new WOW().init()
+    </script>
 </body>
 
 </html>
