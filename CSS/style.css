@@ -905,6 +905,11 @@ footer .section-5-footer .icons {
         margin-bottom: 40px;
     }
 
+    #email-error,
+    #name-error{
+        font-size: 13px;
+    }
+
     .successCard{
         width: 90%;
         margin-right: 10px;
