@@ -9,6 +9,12 @@
     scroll-behavior: smooth;
 }
 
+main{
+    overflow: hidden;
+}
+
+/*! The start of loading page */
+
 #loader{
     position: fixed;
     width: 100%;
@@ -40,43 +46,28 @@
         transform: rotate(360deg);
     }
 }
+/*! The end of loading page */
 
-main {
-    background-color: #F7FAFD;
-}
+/*? The start of coding */
 
-main .information-section {
-    background-color: #0E254E;
-    color: rgba(255, 255, 255, 0.936);
+/*! the start of nav */
+nav {
     display: flex;
-    gap: 50px;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index:999;
+    height: 10vh;
+    background-color:rgb(196, 221, 247);
     padding: 10px;
 }
 
-main .information-section p i {
-    margin-right: 4px;
-}
-
-
-main .information-section p:nth-child(1) {
-    margin-left: 7%;
-}
-
-main .information-section .icons {
-    position: relative;
+nav .container-nav{
     display: flex;
-    gap: 15px;
-    margin-left: 50%;
-    cursor: pointer;
-}
-
-nav {
-    display: flex;
-    margin-top: 3%;
-    position: sticky;
-    top: 0;
-    background-color:#F7FAFD;
-    padding: 15px;
+    justify-content: center;
+    align-items: center;
+    margin-right: 40px;
 }
 
 nav h1 {
@@ -88,10 +79,9 @@ nav h1 {
 
 nav ul {
     display: flex;
-    justify-content: center;
-    margin-left: 25%;
     align-items: center;
-    gap: 60px;
+    justify-content: center;
+    gap: 50px;
     list-style: none;
 }
 
@@ -131,6 +121,7 @@ nav form {
 }
 
 nav form button {
+    width: 150px;
     background: linear-gradient(to right, #2963d8, #516580);
     color: white;
     cursor: pointer;
@@ -141,9 +132,202 @@ nav form button {
     outline: none;
 }
 
+#bars-outside{
+    display: none;
+    color: white;
+    margin-bottom: -20px;
+}
+
+#bars-inside-nav-container{
+    display: none;
+    color: white;
+}
+
+/*! the end of nav */
+
+/*! the start of form-APP */
+.formAPPlication{
+    position: fixed;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 999;
+    width: 35%;
+    height:80%;
+    background-color: #0E254E;
+    margin: 20px auto;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s ease-in-out;
+    display: none;
+}
+
+.formAPPlication form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: 0.3s ease-in-out;
+}
+
+.formAPPlication .texts{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.formAPPlication .texts h4{
+    color: white;
+    text-transform: capitalize;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+.formAPPlication .texts h4 span{
+    color: white;
+    border-bottom: 2px solid #1b59c4;
+}
+
+.formAPPlication .texts #close{
+    color: white;
+    border-bottom: 2px solid #1b59c4;
+    cursor: pointer;
+    margin-left: 230px;
+}
+
+.formAPPlication form input,
+select{
+    width: 400px;
+    padding: 10px 20px;
+    margin-top: 10px;
+    outline: none;
+    border: 1px solid #EBE8E9;
+    border-radius: 5px;
+    letter-spacing: 0.5;
+    font-weight: 400;
+}
+
+.formAPPlication form select{
+    font-size: 15px;
+    text-transform: capitalize;
+}
+
+.formAPPlication form select option{
+    outline:none;
+    border: none;
+    font-size: 15px;
+    text-transform: capitalize;
+    font-weight: light;
+}
+
+.formAPPlication form #price{
+    color: white;
+    font-size: 20px;
+    margin-top: 15px;
+}
+
+.formAPPlication form input::placeholder{
+    color: grey;
+    letter-spacing: 0.5;
+    text-transform: capitalize;
+}
+
+.formAPPlication .checkbox{
+    display: flex;
+    justify-content: baseline;
+    align-items: baseline;
+    margin-top: 10px;
+}
+
+.formAPPlication .checkbox input{
+    width:20px;
+    height: 12px;
+    cursor: pointer;
+}
+
+.formAPPlication .checkbox label{
+    color:white;
+    font-size: 17px;
+    padding-left: 7px;
+    cursor: pointer;
+}
+
+.formAPPlication #btn-formApp{
+    width: 400px;
+    padding: 10px 20px;
+    margin-top: 10px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    letter-spacing: 0.5;
+    font-weight: 400;
+    background-color: #1b59c4;
+    color: white;
+    letter-spacing:0.5;
+    text-transform: capitalize;
+    font-weight: light;
+    cursor: pointer;
+}
+/*! the end of form-APP */
+
+/*! The start of success card */
+.successCard{
+    position: fixed;
+    z-index: 9999;
+    right: 0;
+    top: 85%;
+    box-shadow: 2px 2px 2px #0E254E;
+    background-color: #0E254E;
+    border-radius: 5px;
+    color: white;
+    padding: 20px;
+    text-transform: capitalize;
+    font-weight: 600;
+    opacity: 0;
+    transition: bottom 0.5s ease-in-out;
+}
+
+.successCard.active .time-line{
+    height: 5px;
+    width: 104.7%;
+    background: rgb(25, 243, 141);
+    border-radius: 5px;
+    float: right;
+    margin-top: -20px;
+}
+
+.successCard.active .time-line::after{
+    content: "";
+    display: block;
+    height: 100%;
+    width: 0%;
+    background: #0E254E;
+    animation: progressMove 3s linear forwards;
+}
+
+@keyframes progressMove {
+    from{
+        width: 0;
+    }
+
+    to{
+        width: 100%;
+    }
+}
+
+.successCard.active{
+    opacity: 1;
+}
+
+/*! The end of success card */
+
+/*! the start of Main Titles */
 .main-section {
     margin-left: 8%;
     display: flex;
+    height: 73vh;
 }
 
 .main-section .home-main-text {
@@ -211,102 +395,28 @@ main .search-btn input::placeholder {
 .search-btn button {
     position: absolute;
     font-size: 14px;
-    /* background: linear-gradient(to right, #2963d8, #516580); */
     background-color: white;
     color: #0E254E;
     font-weight: 600;
     width: 15%;
     left: 300px;
-    top: 4.7px;
+    top: 5.2px;
     padding: 15px;
     border-radius: 10px;
     border: none;
     outline: none;
     cursor: pointer;
 }
+/*! the end of main section */
 
+/*! the strat of section-2 */
 .section-2 {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin: 8% 0 8% 4%;
-}
-
-.section-2 img {
-    width: 40%;
-    height: 600px;
-    object-fit: cover;
-    border-radius: 7px;
-}
-
-.section-2 h2 {
-    font-size: 40px;
-    color: rgba(0, 0, 0, 0.850);
-    text-transform: capitalize;
-    padding-bottom: 10px;
-    letter-spacing: 0.5;
-}
-
-.section-2 .information {
-    margin-top: 20px;
-}
-
-.section-2 .information p {
-    line-height: 35px;
-    color: grey;
-    text-transform: capitalize;
-}
-
-.section-2 .section-2-btn {
-    margin-top: 40px;
-    display: flex;
-    align-items: center;
-    gap: 100px;
-}
-
-.section-2 .section-2-btn button {
-    padding: 10px 20px;
-    color: white;
-    background-color: #649ABB;
-    text-transform: capitalize;
-    font-size: 12px;
-    font-weight: 500;
-    letter-spacing: 0.7;
-    border: none;
-    outline: none;
-    cursor: pointer;
-}
-
-.section-2 .section-2-btn a {
-    position: relative;
-    color: #649ABB;
-    font-size: 17px;
-    text-decoration: none;
-    text-transform: capitalize;
-    font-weight: 600;
-    letter-spacing: 0.5;
-    cursor: pointer;
-    padding-bottom: 10px;
-}
-
-.section-2 .section-2-btn a::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    background-color: #649ABB;
-    width: 100%;
-    height: 4px;
-    border-radius: 5px;
-
-}
-
-.section-3 {
     display: flex;
     justify-content: space-between;
     background-color: #bccdd538;
     height: 100vh;
     margin-bottom: 10%;
+
 }
 
 .left-section-title {
@@ -355,15 +465,17 @@ main .search-btn input::placeholder {
     padding-top: 5px;
     margin-top: 5px;
 }
+/*! the end of section-2 */
 
-
-.section-4 {
+/*! the start of section-3 */
+.section-3 {
     display: flex;
     gap: 200px;
     margin-bottom: 10%;
+
 }
 
-.section-4 .left-side-section-4 .border {
+.section-3 .left-side-section-4 .border {
     border: 2px solid #1b59c434;
     border-radius: 3px;
     width: 80%;
@@ -382,17 +494,17 @@ main .search-btn input::placeholder {
     float: left;
 }
 
-.section-4 .right-side-section-4 {
+.section-3 .right-side-section-4 {
     display: flex;
     flex-direction: column;
 }
 
-.section-4 .right-side-section-4 h2 {
+.section-3 .right-side-section-4 h2 {
     font-size: 40px;
     color: #0E254E;
 }
 
-.section-4 .content-right-side-section-4 {
+.section-3 .content-right-side-section-4 {
     margin-top: 50px;
     display: flex;
     flex-direction: column;
@@ -400,18 +512,18 @@ main .search-btn input::placeholder {
     gap: 8px;
 }
 
-.section-4 .right-side-section-4 p {
+.section-3 .right-side-section-4 p {
     color: rgba(0, 0, 0, 0.632);
     font-weight: 400;
     text-transform: capitalize;
     letter-spacing: 0.5px;
 }
 
-.section-4 .right-side-section-4 .btn-section-4 {
+.section-3 .right-side-section-4 .btn-section-4 {
     margin-top: 40px;
 }
 
-.section-4 .right-side-section-4 .btn-section-4 button {
+.section-3 .right-side-section-4 .btn-section-4 button {
     padding: 10px 15px;
     background-color: #649ABB;
     outline: none;
@@ -423,12 +535,99 @@ main .search-btn input::placeholder {
     letter-spacing: 0.5px;
     cursor: pointer;
 }
+/*! the end of section-3 */
+
+/*! the start if section-4 */
+.section-4 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 8% 0 8% 4%;
+}
+
+.section-4 img {
+    width: 40%;
+    height: 600px;
+    object-fit: cover;
+    border-radius: 7px;
+}
+
+.section-4 h2 {
+    font-size: 40px;
+    color: rgba(0, 0, 0, 0.850);
+    text-transform: capitalize;
+    padding-bottom: 10px;
+    letter-spacing: 0.5;
+}
+
+.section-4 .information {
+    margin-top: 20px;
+}
+
+.section-4 .information p {
+    line-height: 35px;
+    color: grey;
+    text-transform: capitalize;
+}
+
+.section-4 .section-2-btn {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    gap: 100px;
+}
+
+.section-4 .section-2-btn button {
+    padding: 10px 20px;
+    color: white;
+    background-color: #649ABB;
+    text-transform: capitalize;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.7;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.section-4 .section-2-btn a {
+    position: relative;
+    color: #649ABB;
+    font-size: 17px;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-weight: 600;
+    letter-spacing: 0.5;
+    cursor: pointer;
+    padding-bottom: 10px;
+}
+
+.section-4 .section-2-btn a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #649ABB;
+    width: 100%;
+    height: 4px;
+    border-radius: 5px;
+
+}
+/*! the end of section-4 */
+
+
+/*! the start of section-5 */
+.section-5{
+    overflow-x: hidden;
+
+}
 
 .section-5 .content .right-side {
     display: flex;
     justify-content: start;
     align-items: center;
     margin-left: 20%;
+    
 }
 
 .section-5 .left-Right{
@@ -504,8 +703,9 @@ main .search-btn input::placeholder {
     text-transform: uppercase;
     margin-top: 10px;
 }
+/*! the end of section-5 */
 
-
+/*! the start of footer */
 footer{
     background-color: #1E1E1E;
     display: flex;
@@ -602,4 +802,249 @@ footer .section-5-footer .icons {
     text-align: center;
     letter-spacing: 0.5;
     text-transform: capitalize;
+}
+/*! the end of footer */
+
+/*! the start of responsive */
+@media (max-width:450px) {
+    nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+    }
+
+    nav .container-nav{
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        align-items: end;
+        background-color: #0E254E;
+        padding: 20px;
+        margin-right: -10px;
+        margin-top: 5px;
+        border-radius: 10px;
+        display: none;
+    }
+    
+    nav ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        align-items: end;
+        margin-top: 365px;
+    }
+    nav h1, 
+    ul li a{
+        font-size: 15px;
+    }
+
+    nav ul li a{
+        color: white !important;
+    }
+
+    nav ul li a::after{
+    display: none; 
+    }
+
+    nav form{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    nav form button{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        border-radius: 5px;
+        margin: 30px 0 10px 0;
+    }
+
+    #bars-outside{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #0E254E;
+        padding-bottom: 23px;
+    }
+
+    #bars-inside-nav-container{
+        display: none;
+        margin-bottom: -20px;
+        margin-top: 30px;
+    }
+
+    .formAPPlication{
+        width: 80%;
+        height: 100%;
+    }
+
+    .formAPPlication .texts #close{
+        margin-left: 100px;
+    }
+
+    #form-containerApp{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    #form-containerApp input,
+    select{
+        width: 100%;
+    }
+
+    #form-containerApp #checkbox{
+        width: 10%;
+    }
+
+    .formAPPlication #btn-formApp{
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
+    .main-section .home-main-text h4{
+        font-size: 13px;
+    }
+
+    .main-section .home-main-text h2{
+        flex-direction: column;
+        font-size: 35px;
+    }
+
+    .main-section .home-main-text p{
+        font-size: 15px;
+    }
+    .main-section .home-main-text h2:nth-child(3){
+        margin-bottom: 20px;
+    }
+
+    .main-section img{
+        display: none;
+    }
+
+    .search-btn{
+        width: 650px;
+    }
+
+    .search-btn button{
+        left: 157px;
+    }
+
+    ::placeholder{
+        font-size: 13px;
+    }
+
+    .section-2{
+        display: flex;
+        flex-direction: column;
+        overflow-y: scroll;
+    }
+
+    .left-section-title{
+        font-size: 23px;
+        margin-top: 20px;
+    }
+
+    .right-section-services{
+        display: flex;
+        justify-content: start;
+        align-items: start;
+        margin-left: 40px;
+    }
+
+    .left-side-section-4{
+        display: none;
+    }
+
+    .section-3 .right-side-section-4 h2{
+        font-size: 27px;
+        margin-left: 10px;
+    }
+
+    .section-3 .content-right-side-section-4 p{
+        margin-left: 12px;
+        font-size: 8px;
+    }
+
+    .section-3 .btn-section-4{
+        display: flex;
+        justify-content: center;
+    }
+
+    .section-3 .right-side-section-4 .btn-section-4 button{
+        font-size: 10px;
+    }
+
+    .section-4 img{
+        display: none;
+    }
+
+    .section-4 .section-2-titles h2{
+        font-size: 25px;
+    }
+
+    .section-4 .section-2-titles p{
+        font-size: 14px;
+        width: 77%;
+    }
+
+    .section-4 .section-2-btn{
+        gap: 50px;
+    }
+
+    .section-4 .section-2-btn button{
+        font-size: 11px;
+    }
+
+    .section-4 .section-2-btn a{
+        font-size: 11px;
+    }
+
+    .contact .section-5{
+        margin-top: 20%;
+    }
+
+    .section-5 .left-Right{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    .section-5 .content .right-side img{
+        width: 200px;
+        margin: 0 90px 0 0;
+    }
+
+    .section-5 .left-side img{
+        display: none;        
+    }
+
+    .section-5 .left-side .titles-5{
+        text-align: center;
+        margin: 0 0 0 0;
+        /* font-size: 10px; */
+    }
+
+    .section-5 .content .left-side .titles-5 h2{
+        font-size: 25px;
+    }
+
+    .section-5 .content .quote-title span{
+        font-size: 25px;
+    }
+    .section-5 .content .quote-title .titles-quote{
+        font-size: 10px;
+        width: 70%;
+    }
+
+    footer{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+    }
 }
