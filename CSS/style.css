@@ -351,7 +351,7 @@ select{
 }
 
 .main-section .home-main-text h2:nth-child(3) {
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 
 .main-section .home-main-text p,
@@ -877,7 +877,6 @@ footer .section-5-footer .icons {
 
     .formAPPlication{
         width: 80%;
-        height: 100%;
     }
 
     .formAPPlication .texts #close{
@@ -893,16 +892,20 @@ footer .section-5-footer .icons {
 
     #form-containerApp input,
     select{
-        width: 100%;
+        width: 90%;
     }
 
     #form-containerApp #checkbox{
-        width: 10%;
+        width: 20%;
     }
 
     .formAPPlication #btn-formApp{
-        width: 100%;
+        width: 90%;
         margin-bottom: 40px;
+    }
+
+    .successCard{
+        width: 90%;
     }
 
     .main-section .home-main-text h4{
@@ -911,11 +914,11 @@ footer .section-5-footer .icons {
 
     .main-section .home-main-text h2{
         flex-direction: column;
-        font-size: 35px;
+        font-size: 40px;
     }
 
     .main-section .home-main-text p{
-        font-size: 15px;
+        font-size: 19px;
     }
     .main-section .home-main-text h2:nth-child(3){
         margin-bottom: 20px;
@@ -960,13 +963,13 @@ footer .section-5-footer .icons {
     }
 
     .section-3 .right-side-section-4 h2{
-        font-size: 27px;
+        font-size: 30px;
         margin-left: 10px;
     }
 
     .section-3 .content-right-side-section-4 p{
         margin-left: 12px;
-        font-size: 8px;
+        font-size: 16px;
     }
 
     .section-3 .btn-section-4{
@@ -978,8 +981,17 @@ footer .section-5-footer .icons {
         font-size: 10px;
     }
 
+    .section-4{
+        display: flex;
+        flex-direction: column;
+    }
+
     .section-4 img{
-        display: none;
+        width: 350px;
+    }
+
+    .section-4 .section-2-titles{
+        margin-top: 20px;
     }
 
     .section-4 .section-2-titles h2{
@@ -987,8 +999,7 @@ footer .section-5-footer .icons {
     }
 
     .section-4 .section-2-titles p{
-        font-size: 14px;
-        width: 77%;
+        display: none;
     }
 
     .section-4 .section-2-btn{
